@@ -7,13 +7,13 @@ import { VscThreeBars } from "react-icons/vsc";
 
 const Nav = () => {
   const [toggle, setToggle] = useState(true);
-  document.body.setAttribute("data-theme", "light");
+  document.body.setAttribute("data-theme", "dark");
 
   return (
-    <div className=" min-w-full border-b border-gray-400 flex items-center">
+    <div className=" min-w-full border-b border-info flex items-center">
       <div className="navbar  bg-base-100">
         <div className="flex-1">
-          <a className="btn btn-ghost normal-case text-xl">
+          <a className="btn text-primary btn-ghost normal-case text-xl">
             <BsShop />
             Shop
           </a>
@@ -25,7 +25,7 @@ const Nav = () => {
             <NavLink
               onClick={() => setToggle((pv) => !pv)}
               to={"/"}
-              className={` hover:text-blue-500 ${toggle && "text-blue-500"}`}
+              className={` hover:text-blue-500 ${toggle && "text-primary"}`}
             >
               Home
             </NavLink>
@@ -34,7 +34,7 @@ const Nav = () => {
             <NavLink
               onClick={() => setToggle((pv) => !pv)}
               to={"/products"}
-              className={` hover:text-blue-500 ${!toggle && "text-blue-500"}`}
+              className={` hover:text-blue-500 ${!toggle && "text-primary"}`}
             >
               Products
             </NavLink>
