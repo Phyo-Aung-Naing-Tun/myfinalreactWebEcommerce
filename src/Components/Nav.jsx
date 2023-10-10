@@ -4,10 +4,10 @@ import { TiShoppingCart } from "react-icons/ti";
 import { IoIosArrowDown } from "react-icons/io";
 import { NavLink } from "react-router-dom";
 import { VscThreeBars } from "react-icons/vsc";
+import ThemeChange from "./ThemeChange";
 
 const Nav = () => {
   const [toggle, setToggle] = useState(true);
-  document.body.setAttribute("data-theme", "dark");
 
   return (
     <div className=" min-w-full border-b border-info flex items-center">
@@ -20,7 +20,7 @@ const Nav = () => {
         </div>
       </div>
       <div className=" me-[30px]  gap-4 flex items-center">
-        <ul className=" hidden sm:flex w-[250px] flex-wrap gap-2 items-center justify-between  ">
+        <ul className=" hidden md:flex w-[350px] flex-wrap gap-2 items-center justify-between  ">
           <li>
             <NavLink
               onClick={() => setToggle((pv) => !pv)}
@@ -40,6 +40,9 @@ const Nav = () => {
             </NavLink>
           </li>
           <li>
+            <ThemeChange />
+          </li>
+          <li>
             <a
               href="#"
               className=" btn-sm btn btn-outline btn-primary flex items-center gap-2"
@@ -57,7 +60,7 @@ const Nav = () => {
             0
           </button>
         </div>
-        <div className="dropdown dropdown-end block sm:hidden">
+        <div className="dropdown dropdown-end block md:hidden">
           <label tabIndex={0} className="btn btn-sm ">
             <VscThreeBars className="text-[2em]" />
           </label>
@@ -92,6 +95,28 @@ const Nav = () => {
                 <IoIosArrowDown />
               </a>
             </li>
+            <hr className="mt-2" />
+            <h2 className=" text-secondary font-semibold">Themes</h2>
+            <div className=" my-2 flex justify-evenly">
+              <div
+                onClick={() => {
+                  document.body.setAttribute("data-theme", "light");
+                }}
+                className=" cursor-pointer border border-info rounded-[100%] hover:scale-[1.2] transition p-3 bg-white"
+              ></div>
+              <div
+                onClick={() => {
+                  document.body.setAttribute("data-theme", "dark");
+                }}
+                className=" cursor-pointer border border-info rounded-[100%] hover:scale-[1.2] transition p-3 bg-black"
+              ></div>
+              <div
+                onClick={() => {
+                  document.body.setAttribute("data-theme", "cupcake");
+                }}
+                className=" cursor-pointer border border-info rounded-[100%] hover:scale-[1.2] transition p-3 bg-green-600"
+              ></div>
+            </div>
           </ul>
         </div>
       </div>
