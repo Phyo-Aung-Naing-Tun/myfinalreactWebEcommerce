@@ -1,6 +1,11 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { getProducts } from "../Redux/Services/productSlice";
+import {
+  getCategories,
+  getCurrentCategory,
+  getFilterProducts,
+  getProducts,
+} from "../Redux/Services/productSlice";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -10,9 +15,15 @@ const Home = () => {
   }, []);
 
   const fetching = async () => {
-    const api = await fetch("https://fakestoreapi.com/products");
-    const data = await api.json();
-    dispatch(getProducts(data));
+    const api = await fetch("https://dummyjson.com/products");
+    const { products } = await api.json();
+    const duplicatedCategories = products?.map((p) => p.category);
+    const categories = new Set(duplicatedCategories);
+    dispatch(getProducts(products));
+    dispatch(getFilterProducts(products));
+    dispatch(getCategories([...categories]));
+    dispatch(getCurrentCategory("All"));
+    dispatch(getFilterProducts(products));
   };
   return (
     <div className=" w-full h-full bg-blue-100    dark:bg-white text-center text-4xl font-bold">

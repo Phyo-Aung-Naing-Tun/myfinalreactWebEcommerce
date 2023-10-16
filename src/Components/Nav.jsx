@@ -10,7 +10,7 @@ const Nav = () => {
   const [toggle, setToggle] = useState(true);
 
   return (
-    <div className=" min-w-full border-b border-info flex items-center">
+    <div className=" sticky bg-base-100 top-0 z-20 min-w-full border-b border-info flex items-center">
       <div className="navbar  bg-base-100">
         <div className="flex-1">
           <a className="btn text-primary btn-ghost normal-case text-xl">
@@ -19,7 +19,7 @@ const Nav = () => {
           </a>
         </div>
       </div>
-      <div className=" me-[30px]  gap-4 flex items-center">
+      <div className=" bg-base-100  me-[30px]  gap-4 flex items-center">
         <ul className=" hidden md:flex w-[350px] flex-wrap gap-2 items-center justify-between  ">
           <li>
             <NavLink
@@ -62,29 +62,17 @@ const Nav = () => {
         </div>
         <div className="dropdown dropdown-end block md:hidden">
           <label tabIndex={0} className="btn btn-sm ">
-            <VscThreeBars className="text-[2em]" />
+            <VscThreeBars className="text-[15px] md:text-[2em]" />
           </label>
           <ul
             tabIndex={0}
             className="dropdown-content w-[150px] gap-2 me-4 z-[1] menu p-2 shadow bg-base-100 rounded-box "
           >
             <li>
-              <NavLink
-                onClick={() => setToggle((pv) => !pv)}
-                to={"/"}
-                className={` hover:text-blue-500 ${toggle && "text-blue-500"}`}
-              >
-                Home
-              </NavLink>
+              <NavLink to={"/"}>Home</NavLink>
             </li>
             <li>
-              <NavLink
-                onClick={() => setToggle((pv) => !pv)}
-                to={"/products"}
-                className={` hover:text-blue-500 ${!toggle && "text-blue-500"}`}
-              >
-                Products
-              </NavLink>
+              <NavLink to={"/products"}>Products</NavLink>
             </li>
             <li>
               <a
@@ -96,25 +84,25 @@ const Nav = () => {
               </a>
             </li>
             <hr className="mt-2" />
-            <h2 className=" text-secondary font-semibold">Themes</h2>
+            <h2 className=" text-primary font-semibold">Themes</h2>
             <div className=" my-2 flex justify-evenly">
               <div
                 onClick={() => {
-                  document.body.setAttribute("data-theme", "light");
+                  document.body.setAttribute("data-theme", "lemonade");
                 }}
-                className=" cursor-pointer border border-info rounded-[100%] hover:scale-[1.2] transition p-3 bg-white"
+                className=" cursor-pointer border border-gray-500 rounded-[100%] hover:scale-[1.2] transition p-3 bg-white"
               ></div>
               <div
                 onClick={() => {
-                  document.body.setAttribute("data-theme", "dark");
+                  document.body.setAttribute("data-theme", "dracula");
                 }}
-                className=" cursor-pointer border border-info rounded-[100%] hover:scale-[1.2] transition p-3 bg-black"
+                className=" cursor-pointer border border-gray-500 rounded-[100%] hover:scale-[1.2] transition p-3 bg-pink-400"
               ></div>
               <div
                 onClick={() => {
-                  document.body.setAttribute("data-theme", "cupcake");
+                  document.body.setAttribute("data-theme", "luxury");
                 }}
-                className=" cursor-pointer border border-info rounded-[100%] hover:scale-[1.2] transition p-3 bg-green-600"
+                className=" cursor-pointer border border-gray-500 rounded-[100%] hover:scale-[1.2] transition p-3 bg-[#c99836]"
               ></div>
             </div>
           </ul>
