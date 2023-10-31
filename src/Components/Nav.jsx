@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import { BsShop } from "react-icons/bs";
 import { TiShoppingCart } from "react-icons/ti";
 import { IoIosArrowDown } from "react-icons/io";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { VscThreeBars } from "react-icons/vsc";
 import ThemeChange from "./ThemeChange";
+import { useSelector } from "react-redux";
 
 const Nav = () => {
+  const { cartProducts } = useSelector((state) => state.productSlice);
   const [toggle, setToggle] = useState(true);
 
   return (
@@ -52,14 +54,14 @@ const Nav = () => {
             </a>
           </li>
         </ul>
-        <div className=" relative">
+        <Link to={"/cart"} className=" relative">
           <a className="btn  btn-primary btn-sm btm-square" href="#">
             <TiShoppingCart />
           </a>
           <button className=" flex justify-center items-center rounded-lg absolute top-[-10px] right-[-10px] text-sm font-semibold bg-red-500 text-white w-[20px] h-[20px]">
-            0
+            {cartProducts.length}
           </button>
-        </div>
+        </Link>
         <div className="dropdown dropdown-end block md:hidden">
           <label tabIndex={0} className="btn btn-sm ">
             <VscThreeBars className="text-[15px] md:text-[2em]" />

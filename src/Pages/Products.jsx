@@ -86,9 +86,7 @@ const Products = () => {
     }
     setToggle(true); //to change the category to All as soon as the search input is clicked
   };
-  document.addEventListener("scroll", () => {
-    console.dir(scrollY);
-  });
+
   return (
     <div className=" w-full flex  ">
       <div
