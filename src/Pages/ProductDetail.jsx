@@ -35,11 +35,8 @@ const ProductDetail = () => {
         </p>
         <div className="flex justify-between items-center">
           <div>
-            <span className="  line-through  text-[16px]">
+            <span className=" text-primary tracking-wider font-semibold   text-[16px]">
               ${product?.price}
-            </span>
-            <span className=" ms-3   text-red-500 font-bold text-[17px]">
-              ${Math.floor(product?.price - product?.discountPercentage * 0.01)}
             </span>
           </div>
           <div id="star-container" className="flex ">

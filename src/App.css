@@ -1,0 +1,23 @@
+::-webkit-scrollbar {
+  width: 0;
+}
+#overlay-container {
+  position: relative;
+}
+#overlay {
+  position: absolute;
+
+  width: 0;
+  height: 100%;
+  background: rgba(30, 30, 30, 0.703);
+  transition: 0.3s ease-in;
+  transform: translate(-100px, 0px);
+}
+#overlay-container:hover #overlay {
+  width: 100%;
+  transform: translate(0, 0);
+}
+
+#overlay h1 {
+  color: white;
+}

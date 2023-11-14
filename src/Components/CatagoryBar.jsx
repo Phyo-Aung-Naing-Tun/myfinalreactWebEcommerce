@@ -21,7 +21,7 @@ const CatagoryBar = ({ handleCatagories }) => {
         {[...categories]?.map((cata) => (
           <div
             onClick={handleCatagories}
-            className="hover:text-primary cat-bar hover:font-bold text-[15px]  tracking-wider transition w-[150px]"
+            className="hover:text-primary cat-bar hover:font-bold text-[13px]  tracking-wider transition w-[150px]"
             key={Math.random()}
           >
             {cata}

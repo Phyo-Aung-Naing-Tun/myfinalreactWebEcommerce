@@ -12,7 +12,10 @@ const Nav = () => {
   const [toggle, setToggle] = useState(true);
 
   return (
-    <div className=" sticky bg-base-100 top-0 z-20 min-w-full border-b border-info flex items-center">
+    <div
+      id="navbar"
+      className=" sticky bg-base-100 top-0 z-20 transition shadow-md border-b border-info flex items-center"
+    >
       <div className="navbar  bg-base-100">
         <div className="flex-1">
           <a className="btn text-primary btn-ghost normal-case text-xl">
@@ -45,13 +48,12 @@ const Nav = () => {
             <ThemeChange />
           </li>
           <li>
-            <a
-              href="#"
+            <NavLink
+              to={"/login"}
               className=" btn-sm btn btn-outline btn-primary flex items-center gap-2"
             >
               Profile
-              <IoIosArrowDown />
-            </a>
+            </NavLink>
           </li>
         </ul>
         <Link to={"/cart"} className=" relative">
@@ -77,13 +79,12 @@ const Nav = () => {
               <NavLink to={"/products"}>Products</NavLink>
             </li>
             <li>
-              <a
-                href="#"
+              <NavLink
+                to={"/login"}
                 className=" btn-sm btn btn-outline btn-primary flex items-center gap-2"
               >
                 Profile
-                <IoIosArrowDown />
-              </a>
+              </NavLink>
             </li>
             <hr className="mt-2" />
             <h2 className=" text-primary font-semibold">Themes</h2>
