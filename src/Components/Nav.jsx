@@ -1,7 +1,5 @@
-import React, { useState } from "react";
 import { BsShop } from "react-icons/bs";
 import { TiShoppingCart } from "react-icons/ti";
-import { IoIosArrowDown } from "react-icons/io";
 import { Link, NavLink } from "react-router-dom";
 import { VscThreeBars } from "react-icons/vsc";
 import ThemeChange from "./ThemeChange";
@@ -9,12 +7,11 @@ import { useSelector } from "react-redux";
 
 const Nav = () => {
   const { cartProducts } = useSelector((state) => state.productSlice);
-  const [toggle, setToggle] = useState(true);
 
   return (
     <div
       id="navbar"
-      className=" sticky bg-base-100 top-0 z-20 transition shadow-md border-b border-info flex items-center"
+      className="  sticky bg-base-100 top-0 z-20 transition shadow-md border-b border-info flex items-center"
     >
       <div className="navbar  bg-base-100">
         <div className="flex-1">
@@ -28,38 +25,41 @@ const Nav = () => {
         <ul className=" hidden md:flex w-[350px] flex-wrap gap-2 items-center justify-between  ">
           <li>
             <NavLink
-              onClick={() => setToggle((pv) => !pv)}
+              id="home"
               to={"/"}
-              className={` hover:text-blue-500 ${toggle && "text-primary"}`}
+              className={` hover:text-[16px] transition font-semibold text-[15px] tracking-wider text-primary
+              }`}
             >
               Home
             </NavLink>
           </li>
           <li>
             <NavLink
-              onClick={() => setToggle((pv) => !pv)}
+              id="products"
               to={"/products"}
-              className={` hover:text-blue-500 ${!toggle && "text-primary"}`}
+              className={` hover:text-[16px] transition font-semibold text-[15px] tracking-wider text-primary
+              }`}
             >
               Products
             </NavLink>
           </li>
           <li>
-            <ThemeChange />
-          </li>
-          <li>
             <NavLink
-              to={"/login"}
-              className=" btn-sm btn btn-outline btn-primary flex items-center gap-2"
+              id="profile"
+              to={"/profile"}
+              className=" hover:text-[16px] transition font-semibold text-[15px] text-primary tracking-wider"
             >
               Profile
             </NavLink>
           </li>
+          <li>
+            <ThemeChange />
+          </li>
         </ul>
         <Link to={"/cart"} className=" relative">
-          <a className="btn  btn-primary btn-sm btm-square" href="#">
+          <span className="btn  btn-primary btn-sm btm-square" href="#">
             <TiShoppingCart />
-          </a>
+          </span>
           <button className=" flex justify-center items-center rounded-lg absolute top-[-10px] right-[-10px] text-sm font-semibold bg-red-500 text-white w-[20px] h-[20px]">
             {cartProducts.length}
           </button>
@@ -79,15 +79,10 @@ const Nav = () => {
               <NavLink to={"/products"}>Products</NavLink>
             </li>
             <li>
-              <NavLink
-                to={"/login"}
-                className=" btn-sm btn btn-outline btn-primary flex items-center gap-2"
-              >
-                Profile
-              </NavLink>
+              <NavLink to={"/profile"}>Profile</NavLink>
             </li>
             <hr className="mt-2" />
-            <h2 className=" text-primary font-semibold">Themes</h2>
+            <h2 className=" text-primary text-[15px] font-semibold">Themes</h2>
             <div className=" my-2 flex justify-evenly">
               <div
                 onClick={() => {

@@ -7,7 +7,7 @@ const ProductsContainer = () => {
   return (
     <div
       id="productContainer"
-      className="  flex-grow min-h-screen  p-[20px] flex flex-1 justify-center items-start flex-wrap gap-[20px]  "
+      className="  flex-grow min-h-screen mb-10 p-[20px] flex flex-1 justify-center items-start flex-wrap gap-[20px]  "
     >
       {filterProducts?.map((product) => (
         <ProductCards key={product.id} {...product} />

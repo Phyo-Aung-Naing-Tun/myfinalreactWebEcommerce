@@ -32,19 +32,31 @@ const GroceriesSection = () => {
   };
   return (
     <div className=" relative">
-      <hr className=" mt-10 mb-16 w-full  h-[2px] bg-primary " />
+      <hr className=" mt-10 mb-16 w-full  h-[2px] bg-primary top-[-13px] absolute   px-2 right-0 " />
 
-      <h3 className=" top-[-20px] absolute bg-base-100 px-2 left-0 text-primary uppercase  text-[15px]  tracking-wider">
+      <h3 className="text-primary uppercase text-[14px] bg-base-100 mb-10 inline-block mx-auto relative px-4 z-10  md:text-[20px]  tracking-wider">
         {`${categories[4]} and ${categories[5]}`}{" "}
       </h3>
-      <div ref={scrollRef} className=" whitespace-nowrap overflow-y-auto ">
+      <div
+        ref={scrollRef}
+        className=" mt-10 whitespace-nowrap overflow-y-auto "
+      >
         {fliterProducts.map((fp) => (
           <div
             id="overlay-container"
             className=" border rounded-md border-info shadow-md text-sm overflow-hidden inline-block w-[150px] h-[200px] mx-[10px] md:w-[200px] md:h-[250px]"
             key={fp.id}
           >
-            <div className=" flex justify-center items-center" id="overlay">
+            <div
+              className=" flex justify-center flex-col items-center"
+              id="overlay"
+            >
+              <h1 className=" tracking-wider font-bold text-lg mb-3  text-primary ">
+                {fp.title.substring(0, 16)} ...
+              </h1>
+              <h1 className=" mb-3 tracking-wider font-semibold text-white">
+                Price : ${fp.price}
+              </h1>
               <button
                 onClick={() => {
                   nav("/detail", { state: fp });
@@ -62,9 +74,9 @@ const GroceriesSection = () => {
         <button
           id="scrollLeft"
           onClick={makeScrollY}
-          className=" btn btn-primary pb-1 btn-sm font-bold btn-outline mb-10 text-[20px]"
+          className=" btn btn-primary pb-1 btn-sm font-bold mt-10  mb-10 text-[24px]"
         >
-          {">>"}
+          &#9205;
         </button>
       </div>
     </div>

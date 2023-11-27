@@ -85,7 +85,7 @@ const CartProductItems = (props) => {
         >
           <button
             onClick={decrease}
-            className="lg:btn-sm btn-xs btn-outline btn btn-primary  font-bold text-[15px] lg:text-[18px]"
+            className=" btn-xs btn-outline btn btn-primary  font-bold text-[15px] lg:text-[18px]"
           >
             <FiMinus />
           </button>
@@ -94,7 +94,7 @@ const CartProductItems = (props) => {
           </div>
           <button
             onClick={increase}
-            className="lg:btn-sm btn-xs btn-outline btn btn-primary  font-bold text-[15px] lg:text-[18px]"
+            className=" btn-xs btn-outline btn btn-primary  font-bold text-[15px] lg:text-[18px]"
           >
             <FiPlus />
           </button>

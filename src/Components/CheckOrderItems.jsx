@@ -5,7 +5,10 @@ const CheckOrderItems = ({ title, price }) => {
   const product = JSON.parse(Cookies.get(title));
 
   return (
-    <div className="flex justify-between text-[10px] lg:text-[15px]">
+    <div
+      id="orderItems"
+      className="flex justify-between text-[10px] lg:text-[15px]"
+    >
       <h2 className="text-primary w-[80px] lg:w-[120px]  mb-2">
         {title.substring(0, 13)} ...
       </h2>

@@ -6,6 +6,7 @@ const initialState = {
   categories: [],
   currentCategory: "",
   cartProducts: [],
+  orderHistory: [],
   totalCost: 0,
 };
 export const productSlice = createSlice({
@@ -31,6 +32,12 @@ export const productSlice = createSlice({
         state.cartProducts.push(payload);
       }
     },
+    setOrderHistories: (state, { payload }) => {
+      state.orderHistory = [...state.orderHistory, payload];
+    },
+    resetOrderHistories: (state, { payload }) => {
+      state.orderHistory = payload;
+    },
     deleCartProduct: (state, { payload }) => {
       state.cartProducts = payload;
     },
@@ -39,6 +46,9 @@ export const productSlice = createSlice({
     },
     minusTotalCost: (state, { payload }) => {
       state.totalCost -= payload;
+    },
+    deleteTotalCost: (state) => {
+      state.totalCost = 0;
     },
   },
 });
@@ -53,5 +63,8 @@ export const {
   setToggle,
   plusTotalCost,
   minusTotalCost,
+  setOrderHistories,
+  resetOrderHistories,
+  deleteTotalCost,
 } = productSlice.actions;
 export default productSlice.reducer;

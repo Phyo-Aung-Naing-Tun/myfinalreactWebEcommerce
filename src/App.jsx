@@ -5,7 +5,7 @@ import Paths from "./Paths/Paths";
 
 function App() {
   return (
-    <div>
+    <div className=" select-none">
       <Paths />
     </div>
   );

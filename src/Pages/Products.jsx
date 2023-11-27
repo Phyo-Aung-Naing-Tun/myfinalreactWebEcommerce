@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from "react-redux";
-// import ProductCards from "../Components/ProductCards";
 import CatagoryBar from "../Components/CatagoryBar";
 import {
   getCurrentCategory,
@@ -91,7 +90,7 @@ const Products = () => {
     <div className=" w-full flex  ">
       <div
         id="sideBar"
-        className=" relative hidden md:flex border-e border-info w-[200px]  min-h-screen"
+        className=" relative hidden md:flex border-e border-info w-[200px]   min-h-screen"
       >
         <CatagoryBar handleCatagories={handleCatagories} />
       </div>

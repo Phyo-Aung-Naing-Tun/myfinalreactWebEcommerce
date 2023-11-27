@@ -53,13 +53,13 @@ const FooterSection = () => {
       >
         <div className=" overflow-scroll px-3 py-3 md:flex items-center flex-wrap  gap-[100px] justify-center absolute top-0 left-0 right-0 bottom-0 bg-[#0000009f]">
           <div className="mb-4 lg:mb-0" id="tech-container">
-            <h1 className=" mb-4 text-primary tracking-wider font-bold text-[19px] uppercase">
+            <h1 className=" mb-4 text-primary tracking-wider font-bold text-[16px]  md:text-[19px] uppercase">
               Technologies
             </h1>
             <div className="flex flex-wrap gap-3 " id="tech-img-container">
               {technologies.map((tech) => (
                 <div
-                  className=" w-7 bg-white rounded-md overflow-hidden shadow-lg h-7"
+                  className=" w-5 md:w-7 md:h-7 bg-white rounded-md overflow-hidden shadow-lg h-5"
                   key={tech.name}
                 >
                   {" "}
@@ -72,7 +72,7 @@ const FooterSection = () => {
             </div>
           </div>
           <div className="mb-4 lg:mb-0" id="projects-container">
-            <h1 className=" mb-2  text-primary tracking-wider font-bold text-[19px] uppercase">
+            <h1 className=" mb-2  text-primary tracking-wider font-bold text-[16px]  md:text-[19px] uppercase">
               Other Project
             </h1>
 
@@ -86,22 +86,31 @@ const FooterSection = () => {
             </div>
           </div>
           <div className="mb-4 lg:mb-0" id="contacts">
-            <h1 className=" mb-4 text-primary tracking-wider font-bold text-[19px] uppercase">
+            <h1 className=" mb-4 text-primary tracking-wider font-bold text-[16px] md:text-[19px] uppercase">
               Contacts
             </h1>
             <div className=" flex w-[120px] justify-between  text-[23px]  text-white">
-              <span className=" hover:text-primary cursor-pointer">
+              <a
+                href="https://www.facebook.com/phyoaung.naingtun.5"
+                className=" hover:text-primary cursor-pointer"
+              >
                 <BsFacebook />
-              </span>
-              <span className=" hover:text-primary cursor-pointer">
+              </a>
+              <a
+                href="tel:09783538348"
+                className=" hover:text-primary cursor-pointer"
+              >
                 <FaPhoneSquare />
-              </span>
-              <span className=" hover:text-primary cursor-pointer">
+              </a>
+              <a
+                href="mailto:phyotun24@gmail.com"
+                className=" hover:text-primary cursor-pointer"
+              >
                 <BsFillEnvelopeAtFill />
-              </span>
-              <span className=" hover:text-primary cursor-pointer">
+              </a>
+              <a href="" className=" hover:text-primary cursor-pointer">
                 <VscGithub />
-              </span>
+              </a>
             </div>
           </div>
         </div>

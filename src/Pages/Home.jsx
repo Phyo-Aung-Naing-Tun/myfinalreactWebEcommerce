@@ -7,7 +7,6 @@ import {
   getProducts,
 } from "../Redux/Services/productSlice";
 import SectionForProducts from "../Components/SectionForProducts";
-// import SectionForProductsInSmScreen from "../Components/SectionForProductsInSmScreen";
 import { useNavigate } from "react-router-dom";
 import FragrancesAndSkincareSection from "../Components/FragrancesAndSkincareSection";
 import GroceriesSection from "../Components/GroceriesSection";
@@ -45,7 +44,7 @@ const Home = () => {
           className="  h-screen flex flex-col justify-center items-start"
         >
           <div className=" ms-4 md:ms-10 tracking-wider flex flex-col items-start lg:text-[3vw] text-base-100 gap-10  sm:gap-6 text-[7vw]">
-            <h1 className=" lg:text-[3vw]  font-bold text-[8vw]">
+            <h1 className=" text-primary lg:text-[3vw]  font-bold text-[8vw]">
               All Your Favorites
             </h1>{" "}
             <h1>in one place. &#128525;</h1>
