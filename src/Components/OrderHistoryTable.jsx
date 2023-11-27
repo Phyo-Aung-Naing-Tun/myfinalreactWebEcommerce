@@ -102,8 +102,8 @@ const OrderHistoryTable = () => {
           <h4 className=" text-xs  mt-3">Time : {orderDetail?.time}</h4>
           <h4 className=" text-xs  ">Date : {orderDetail?.date}</h4>
 
-          <div className="overflow-x-auto mt-3">
-            <table className="table table-xs">
+          <div className=" overflow-x-auto mt-3">
+            <table className="table overflow-scroll table-xs">
               <thead>
                 <tr>
                   <th></th>

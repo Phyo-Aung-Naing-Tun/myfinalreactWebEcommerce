@@ -50,10 +50,10 @@ const SectionForProducts = () => {
               className=" flex justify-center flex-col items-center"
               id="overlay"
             >
-              <h1 className=" tracking-wider font-bold text-lg mb-3  text-primary ">
+              <h1 className=" tracking-wider font-bold text-xs md:text-lg mb-3  text-primary ">
                 {fp.title.substring(0, 16)} ...
               </h1>
-              <h1 className=" mb-3 tracking-wider font-semibold text-white">
+              <h1 className=" mb-3 tracking-wider text-xs font-semibold text-white">
                 Price : ${fp.price}
               </h1>
               <button
@@ -73,7 +73,7 @@ const SectionForProducts = () => {
         <button
           id="scrollLeft"
           onClick={makeScrollY}
-          className=" btn btn-primary pb-1 btn-sm font-bold mt-10  mb-10  text-[24px]"
+          className=" btn btn-primary pb-1 btn-outline btn-sm font-bold mt-10  mb-10  text-[24px]"
         >
           &#9205;
         </button>

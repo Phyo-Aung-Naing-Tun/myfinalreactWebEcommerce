@@ -1,12 +1,13 @@
 import { BsShop } from "react-icons/bs";
 import { TiShoppingCart } from "react-icons/ti";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { VscThreeBars } from "react-icons/vsc";
 import ThemeChange from "./ThemeChange";
 import { useSelector } from "react-redux";
 
 const Nav = () => {
   const { cartProducts } = useSelector((state) => state.productSlice);
+  const nav = useNavigate();
 
   return (
     <div
@@ -15,7 +16,12 @@ const Nav = () => {
     >
       <div className="navbar  bg-base-100">
         <div className="flex-1">
-          <a className="btn text-primary btn-ghost normal-case text-xl">
+          <a
+            onClick={() => {
+              nav("/");
+            }}
+            className="btn text-primary btn-ghost normal-case text-xl"
+          >
             <BsShop />
             Shop
           </a>
