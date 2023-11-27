@@ -21,6 +21,7 @@ const OrderHistoryTable = () => {
     );
     setOrderDetail(filterOrder);
   };
+
   const handleDelete = (e) => {
     Swal.fire({
       title: "Are you sure?",

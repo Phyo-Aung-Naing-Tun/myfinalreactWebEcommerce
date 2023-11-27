@@ -51,7 +51,6 @@ const CartProductItems = (props) => {
       JSON.stringify({ total: price * (product?.count + 1), count: count + 1 })
     );
   };
-  console.log(product);
   return (
     <div className=" shadow-md py-3 px-3   flex flex-wrap md:justify-evenly items-center">
       <div className="flex w-full md:w-[250px]  truncate me-3  items-center gap-4">

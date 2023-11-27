@@ -11,7 +11,7 @@ import Cookies from "js-cookie";
 const Registor = () => {
   const formRef = useRef();
   const nav = useNavigate();
-  const [getSignIn, { isLoading, isSuccess, isError }] = useGetSignInMutation();
+  const [getSignIn, { isLoading }] = useGetSignInMutation();
   const signinAlert = (type, message) => {
     Swal.fire({
       position: "center",
@@ -43,7 +43,6 @@ const Registor = () => {
       console.log(error);
     }
   };
-  console.log(typeof Cookies.get("userInfo"));
   return (
     <div className=" relative flex justify-center items-center w-full h-[600px]">
       <div
