@@ -108,7 +108,10 @@ const FooterSection = () => {
               >
                 <BsFillEnvelopeAtFill />
               </a>
-              <a href="" className=" hover:text-primary cursor-pointer">
+              <a
+                href="https://github.com/Phyo-Aung-Naing-Tun/myfinalreactWebEcommerce"
+                className=" hover:text-primary cursor-pointer"
+              >
                 <VscGithub />
               </a>
             </div>
