@@ -53,7 +53,7 @@ const FragrancesAndSkincareSection = () => {
               id="overlay"
             >
               <h1 className=" tracking-wider font-bold text-xs md:text-lg mb-3  text-primary ">
-                {fp.title.substring(0, 16)} ...
+                {fp.title.substring(0, 15)} ...
               </h1>
               <h1 className=" mb-3 tracking-wider text-xs font-semibold text-white">
                 Price : ${fp.price}
@@ -62,7 +62,7 @@ const FragrancesAndSkincareSection = () => {
                 onClick={() => {
                   nav("/detail", { state: fp });
                 }}
-                className=" btn btn-xs btn-primary tracking-wider  "
+                className=" btn btn-xs absolute bottom-10 btn-primary tracking-wider  "
               >
                 Details
               </button>
@@ -75,9 +75,9 @@ const FragrancesAndSkincareSection = () => {
         <button
           id="scrollLeft"
           onClick={makeScrollY}
-          className=" btn btn-primary btn-outline pb-1 btn-sm font-bold mt-10  mb-10  text-[24px]"
+          className=" btn btn-primary btn-outline pb-2 btn-sm font-bold mt-10  mb-10  text-[24px]"
         >
-          &#9205;
+          {">"}
         </button>
       </div>
     </div>

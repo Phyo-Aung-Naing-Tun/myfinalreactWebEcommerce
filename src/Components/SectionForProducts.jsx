@@ -43,7 +43,7 @@ const SectionForProducts = () => {
         {fliterProducts.map((fp) => (
           <div
             id="overlay-container"
-            className=" border rounded-md border-info shadow-md text-sm overflow-hidden inline-block w-[150px] h-[200px] mx-[10px] md:w-[200px] md:h-[250px]"
+            className=" border  rounded-md border-info  shadow-md text-sm overflow-hidden inline-block w-[150px] h-[200px] mx-[10px] md:w-[200px] md:h-[250px]"
             key={fp.id}
           >
             <div
@@ -51,20 +51,21 @@ const SectionForProducts = () => {
               id="overlay"
             >
               <h1 className=" tracking-wider font-bold text-xs md:text-lg mb-3  text-primary ">
-                {fp.title.substring(0, 16)} ...
+                {fp.title.substring(0, 14)} ...
               </h1>
-              <h1 className=" mb-3 tracking-wider text-xs font-semibold text-white">
+              <h1 className="  mb-3 tracking-wider text-xs font-semibold text-white">
                 Price : ${fp.price}
               </h1>
               <button
                 onClick={() => {
                   nav("/detail", { state: fp });
                 }}
-                className=" btn btn-primary tracking-wider  btn-xs"
+                className=" btn btn-primary absolute bottom-10 tracking-wider  btn-xs"
               >
                 Details
               </button>
             </div>
+
             <img src={fp.thumbnail} className=" object-contain w-full h-full" />
           </div>
         ))}
@@ -73,9 +74,9 @@ const SectionForProducts = () => {
         <button
           id="scrollLeft"
           onClick={makeScrollY}
-          className=" btn btn-primary pb-1 btn-outline btn-sm font-bold mt-10  mb-10  text-[24px]"
+          className=" btn btn-primary pb-2 btn-outline btn-sm font-bold mt-10  mb-10  text-[24px]"
         >
-          &#9205;
+          {">"}
         </button>
       </div>
     </div>

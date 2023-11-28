@@ -50,7 +50,7 @@ const OrderHistoryTable = () => {
   };
   return (
     <div className=" my-10 lg:my-20 overflow-scroll shadow-lg lg:mx-10 ">
-      <table className="table table-xs md:table table-zebra ">
+      <table className="table  table-zebra ">
         {/* head */}
         <thead>
           <tr>
@@ -76,14 +76,14 @@ const OrderHistoryTable = () => {
                   onClick={handleShowDetail}
                   className="btn-xs text-md cursor-pointer btn-primary btn"
                 >
-                  &#128270;
+                  Detail
                 </button>
                 <button
                   className="bg-red-500 text-white  cursor-pointer btn-xs btn"
                   onClick={handleDelete}
                   id={order.id}
                 >
-                  X
+                  Delete
                 </button>
               </td>
             </tr>

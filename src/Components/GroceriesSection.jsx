@@ -52,7 +52,7 @@ const GroceriesSection = () => {
               id="overlay"
             >
               <h1 className=" tracking-wider font-bold text-xs md:text-lg mb-3  text-primary ">
-                {fp.title.substring(0, 16)} ...
+                {fp.title.substring(0, 15)} ...
               </h1>
               <h1 className=" mb-3 tracking-wider text-xs  font-semibold text-white">
                 Price : ${fp.price}
@@ -61,7 +61,7 @@ const GroceriesSection = () => {
                 onClick={() => {
                   nav("/detail", { state: fp });
                 }}
-                className=" btn btn-primary tracking-wider  btn-xs"
+                className=" btn btn-primary absolute bottom-10 tracking-wider  btn-xs"
               >
                 Details
               </button>
@@ -74,9 +74,9 @@ const GroceriesSection = () => {
         <button
           id="scrollLeft"
           onClick={makeScrollY}
-          className=" btn btn-primary btn-outline pb-1 btn-sm font-bold mt-10  mb-10 text-[24px]"
+          className=" pb-2 btn btn-primary btn-outline  btn-sm font-bold mt-10  mb-10 text-[24px]"
         >
-          &#9205;
+          {">"}
         </button>
       </div>
     </div>
