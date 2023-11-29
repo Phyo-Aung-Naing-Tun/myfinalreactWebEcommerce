@@ -37,15 +37,16 @@ const Home = () => {
         <div
           style={{
             backgroundImage:
-              "url(https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074076.jpg?w=1380&t=st=1699023049~exp=1699023649~hmac=d0ee742a0cd7c0805d9437e4e35f866e1a0939d31413ac80085ab62a5690dd77)",
+              "url(https://st4.depositphotos.com/13193658/30137/i/450/depositphotos_301375510-stock-illustration-young-woman-holding-credit-card.jpg)",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: "center",
+            backgroundBlendMode: "darken",
           }}
           className="  h-screen flex flex-col justify-center items-start"
         >
-          <div className=" ms-4 md:ms-10 tracking-wider flex flex-col items-start lg:text-[3vw] text-base-100 gap-10  sm:gap-6 text-[7vw]">
-            <h1 className=" text-primary lg:text-[3vw]  font-bold text-[8vw]">
+          <div className=" ms-4 md:ms-10 tracking-wider flex flex-col items-start lg:text-[3vw] text-base-100 md:gap-10  gap-4 text-[7vw]">
+            <h1 className="  lg:text-[3vw]  font-bold text-[8vw]">
               All Your Favorites
             </h1>{" "}
             <h1>in one place. &#128525;</h1>

@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { MdNavigateNext } from "react-icons/md";
 
 const GroceriesSection = () => {
   const [scrollValue, setScrollValue] = useState(0);
@@ -34,13 +35,10 @@ const GroceriesSection = () => {
     <div className=" relative">
       <hr className=" mt-10 mb-16 w-full  h-[2px] bg-primary top-[-13px] absolute   px-2 right-0 " />
 
-      <h3 className="text-primary uppercase text-[14px] bg-base-100 mb-10 inline-block mx-auto relative px-4 z-10  md:text-[20px]  tracking-wider">
+      <h3 className="text-primary uppercase text-[17px] bg-base-100 mb-10 inline-block mx-auto relative px-4 z-10  md:text-[20px]  tracking-wider">
         {`${categories[4]} and ${categories[5]}`}{" "}
       </h3>
-      <div
-        ref={scrollRef}
-        className=" mt-10 whitespace-nowrap overflow-y-auto "
-      >
+      <div ref={scrollRef} className=" mt-6 whitespace-nowrap overflow-y-auto ">
         {fliterProducts.map((fp) => (
           <div
             id="overlay-container"
@@ -71,12 +69,12 @@ const GroceriesSection = () => {
         ))}
       </div>
       <div>
-        <button
-          id="scrollLeft"
-          onClick={makeScrollY}
-          className=" pb-2 btn btn-primary btn-outline  btn-sm font-bold mt-10  mb-10 text-[24px]"
-        >
-          {">"}
+        <button className=" btn btn-primary   btn-outline btn-sm font-bold mt-10  mb-10  text-[24px]">
+          <MdNavigateNext
+            id="scrollLeft"
+            onClick={makeScrollY}
+            className=" w-full  h-full"
+          />
         </button>
       </div>
     </div>

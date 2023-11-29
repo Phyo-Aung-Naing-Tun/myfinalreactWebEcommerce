@@ -101,7 +101,7 @@ const CartProduct = () => {
                 });
               }
             }}
-            className="btn tracking-wider font-bold btn-primary btn-sm md:btn-md w-full  left-[100px] right-[100px]"
+            className="btn tracking-wider font-bold btn-primary btn-md w-full  left-[100px] right-[100px]"
           >
             Confirm Order
           </button>
@@ -137,7 +137,6 @@ const CartProduct = () => {
               </div>
               <div className="modal-action">
                 <form method="dialog">
-                  {/* if there is a button in form, it will close the modal */}
                   <button
                     onClick={() => {
                       dispatch(setOrderHistories(vouncherInfos));

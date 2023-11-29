@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { MdNavigateNext } from "react-icons/md";
 
 const SectionForProducts = () => {
   const [scrollValue, setScrollValue] = useState(0);
@@ -33,7 +34,7 @@ const SectionForProducts = () => {
 
   return (
     <div className="">
-      <h3 className=" my-10 text-primary  uppercase  text-[14px] md:text-[20px] tracking-wider">
+      <h3 className=" my-10 text-primary  uppercase  text-[17px] md:text-[20px] tracking-wider">
         {`Most Popular ${categories[0]} and ${categories[1]}`}{" "}
       </h3>
       <div
@@ -71,12 +72,12 @@ const SectionForProducts = () => {
         ))}
       </div>
       <div>
-        <button
-          id="scrollLeft"
-          onClick={makeScrollY}
-          className=" btn btn-primary pb-2 btn-outline btn-sm font-bold mt-10  mb-10  text-[24px]"
-        >
-          {">"}
+        <button className=" btn btn-primary   btn-outline btn-sm font-bold mt-10  mb-10  text-[24px]">
+          <MdNavigateNext
+            id="scrollLeft"
+            onClick={makeScrollY}
+            className=" w-full  h-full"
+          />
         </button>
       </div>
     </div>
